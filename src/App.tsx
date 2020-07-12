@@ -1,28 +1,14 @@
 import React from 'react'
-import {Input} from './components/Input'
-import {Stats} from './components/Stats'
-import {Tasks} from './components/Tasks'
-import {ThemeProvider, GlobalStyles, Page} from './components/theme'
-import {Header} from './components/Header'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-const Home = () => {
-    return (
-        <Page>
-            <Header />
-            <Stats />
-            <Tasks />
-            <Input />
-        </Page>
-    )
-}
+import Routes from './routes'
 
 const App = () => {
-    return (
-        <ThemeProvider darkMode={true}>
-            <GlobalStyles />
-            <Home />
-        </ThemeProvider>
-    )
+  return (
+    <Router>
+      <Routes />
+    </Router>
+  )
 }
 
 export default App
